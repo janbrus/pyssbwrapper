@@ -1,12 +1,12 @@
 from . import session
 import json
 
-class SCB(object):
+class SSB(object):
     """ Version 0.1.2 """
     def __init__(self, lang, *args):
         self.ids = list(args)
-        self.url = 'https://api.scb.se/OV0104/v1/doris/{}/ssd/'.format(lang)
-        self.url_out = 'https://www.statistikdatabasen.scb.se/pxweb/{}/ssd/START__'.format(lang)
+        self.url = 'https://data.ssb.no/api/v0/{}/table/'.format(lang)
+        self.url_out = 'https://data.ssb.no/api/v0/{}/table/START__'.format(lang)
         self.query = {"query": [], 
                       "response": {"format": "json"}
                       }
